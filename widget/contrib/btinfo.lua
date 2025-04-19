@@ -1,6 +1,6 @@
 --[[
 
-     Licensed under GNU General Public License v2
+     Licensed under GNU General Public License v3
       * (c) 2025, Mehmet Tekman <http://github.com/mtekman>
 
 --]]
@@ -9,14 +9,14 @@ local helpers      = require("lain.helpers")
 local wibox        = require("wibox")
 local string       = string
 
--- Bluetooth battery
+-- Bluetooth Information
 -- lain.widget.contrib.btinfo
 
 local function factory(args)
     args             = args or {}
 
     local btinfo      = {widget = args.widget or wibox.widget.textbox()}
-    local timeout    = args.timeout or 10
+    local timeout    = args.timeout or 30
     local device_mac = args.device_mac or ""
     local settings   = args.settings or function() end
 
